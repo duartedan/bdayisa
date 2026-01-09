@@ -12,7 +12,6 @@ body {
     background: linear-gradient(120deg, #ffdde1, #ee9ca7);
     display: flex;
     justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
 
@@ -43,6 +42,8 @@ body {
     width: 90%;
     max-width: 700px;
     z-index: 1;
+
+    margin-top: 50px;
 }
 
 .page {
