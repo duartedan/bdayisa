@@ -164,7 +164,7 @@ button:hover {
 }
 
 /* Responsividade */
-@media (max-width: 1000px) {
+@media (max-width: 1079px) {
     #album {
         margin-top: 20px;
     }
