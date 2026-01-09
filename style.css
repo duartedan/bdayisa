@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Formas decorativas */
+.background-shapes::before,
+.background-shapes::after {
+    content: '';
+    position: fixed;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.background-shapes::before {
+    top: -100px;
+    left: -100px;
+}
+
+.background-shapes::after {
+    bottom: -100px;
+    right: -100px;
+}
+
+#album {
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    z-index: 1;
+}
+
+.page {
+    display: none;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+    color: #c94f7c;
+}
+
+p {
+    margin-top: 20px;
+    color: #555;
+    line-height: 1.7;
+    font-size: 13px;
+}
+
+h1 i, h2 i {
+    font-size: 21px;
+}
+.bi-arrow-right, .bi-arrow-left {
+    font-size: 13px;
+}
+
+/* Fotos estilo álbum */
+.photo-frame {
+    width: 260px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease;
+}
+
+.photo-frame img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.photo-frame:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.rotate-left {
+    transform: rotate(-3deg);
+}
+
+.rotate-right {
+    transform: rotate(3deg);
+}
+
+/* Polaroid */
+.polaroid {
+    padding-bottom: 25px;
+}
+
+.caption {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* Navegação */
+.navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.navigation button a {
+    text-decoration: none;
+    text-transform: none;
+    color: white;
+}
+
+button {
+    border: none;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff6fa5, #ff9a9e);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255,111,165,0.4);
+}
+
+.signature {
+    margin-top: 30px;
+    font-size: 1.1rem;
+}
+
+/* Animação */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
